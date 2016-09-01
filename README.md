@@ -25,7 +25,7 @@ It contains all of the material required to stand this up in your own environmen
 
 ## Will this work on Windows?
 
-Yes.  While the demo was conducted on Linux clients for performance, the cookbook supports both Windows and Linux based clients.  The only reason I ran this on Linux was for lightweight system requirements, since it was running from my Mac laptop.
+**Yes!**  While the demo was conducted on Linux clients for performance, the cookbook supports both Windows and Linux based clients.  The only reason I ran this on Linux was for lightweight system requirements, since it was running from my Mac laptop.
 
 Any platform that Commvault supports, is a platform/agent that can be orchestrated and controlled via the API, and therefore by your desired automation scripts/approach.
 
