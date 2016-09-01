@@ -15,12 +15,12 @@ It contains all of the material required to stand this up in your own environmen
 * **Vagrantfile** - contains self-descriptive code to instruct Vagrant (https://www.vagrantup.com) how to create a test Commvault environment consisting of 1x CommServe, 3x example clients (Ubuntu 14.04 LTS) and 1x MA/FREL for testing NFS access.
 
 * **cookbooks** - contains the "commvaultvmworld" cookbook, "nginx" cookbook (the sample application demo'd throughout the session) and required scripts for Windows deployment (windows, chef_handler, chocolatey).   Will perform the following actions:
-** Auto-deploy & configure a v11 CommServe
-** Auto-deploy & configure a File System Agent
-** Configure File System subclent
-** Launch File System backup
-** Launch File System restore
-** Can also deploy Media Agent, Virtual Server Agent and convert a standard Media Agent to a FREL host
+  * Auto-deploy & configure a v11 CommServe
+  * Auto-deploy & configure a File System Agent
+  * Configure File System subclent
+  * Launch File System backup
+  * Launch File System restore
+  * Can also deploy Media Agent, Virtual Server Agent and convert a standard Media Agent to a FREL host
 
 
 ## Will this work on Windows?
