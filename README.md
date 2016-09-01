@@ -57,6 +57,11 @@ http://documentation.commvault.com/commvault/v11/article?p=products/tools/overvi
 4. Run `vagrant up commserve example1 production`
 5. Once backup has completed, run `vagrant up test`
 
+The Commvault username and password for this lab is:
+
+`username: admin
+password: C0mmvault!`
+
 
 ## Media
 
