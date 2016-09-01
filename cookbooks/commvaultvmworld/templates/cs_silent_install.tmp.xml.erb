@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVInstallManager_ClientSetup requestType="1" Operationtype="0" requestFlags="0" Focus="New">
+	<CommServeInfo>
+		<CommserveHostInfo hostName="" clientName="" />
+	</CommServeInfo>
+	<installFlags installLatestServicePack="1" showFirewallConfigDialogs="0" autoRegister="0" unixGroupAccess="7" allowMultipleInstances="1" skipConfigureLaptopBackupMonitor="0" useNewOS="0" restoreOnlyAgents="0" killBrowserProcesses="0" install32Base="0" disableOSFirewall="0" decoupledInstall="0" RepairMode="0" launchConsole="0" deletePackagesAfterInstall="0" useExistingDump="0" unixOtherAccess="7" stopOracleServices="0" install64Base="0" upgradeMode="0" preferredIPFamily="1" launchRegisterMe="0" addToFirewallExclusion="1" ignoreJobsRunning="0" forceReboot="0" overrideClientInfo="0" activateAllUserProfiles="0">
+		<sqlInstall sqlDataFilePath="C:\Program Files\Commvault\ContentStore">
+			<sqlSaUserAccount password="||#05!MzA2OTg0NGZhY2VhZjM5ODY5M2MwYzMwOTc4ZDY2MWEyM2QxYzFjZmM0MzdmNWYzY2Q2ZmNlYTE5N2MxYjYxZDI=" />
+		</sqlInstall>
+	</installFlags>
+	<User userId="1" />
+	<clientComposition>
+		<components>
+			<sqlAgent instanceAutoDiscovery="1" />
+			<workflowEngine />
+			<commcellConsole configureWebAlias="0" />
+			<adminConsole adminConsoleURL="http://vmw-v11-cs:0/adminconsole" webServerClientId="vmw-v11-cs" adminConsolePort="0" />
+			<webConsole webConsoleURL="http://vmw-v11-cs:0/webconsole/clientDetails/fsDetails.do?clientName=CLIENTNAME" webConsolePort="0" webURL="http://vmw-v11-cs:0/webconsole" webServerClientId="vmw-v11-cs" />
+			<commserve>
+				<csdbInfo CommcellPasswordExists="0" CommservSurveyEnabled="1" installMode="1">
+					<CommCellUser password="||#05!MzExY2Y4NTUyNjE3ZjdkZTc1OTE1YTE1NzgyMDhjNzYzYjljNWU0MjAwMjUwODA5ZQ==" userName="admin" />
+					<cvSQLAdmin password="||#05!M2MxMTgyNWY5ODEwZWU4NmU5YTZkYzA2ZGUyNzlkMjg5NTdhN2ViMmY0ZTk4YzAyNTNjM2NkNmUyM2E2YWMzZDUwNTRjOWJjYTk1YWIwZmZhZjI3YTIyNmM2MmI0NDBlNw==" />
+					<ERPath path="C:\CSDR_stage1">
+						<userAccount password="" userName="" />
+					</ERPath>
+					<FTPLocation path="C:\Program Files\Commvault\ContentStore\SoftwareCache" />
+				</csdbInfo>
+				<oemInfo OEMId="1" />
+			</commserve>
+			<commonInfo>
+				<storagePolicyToUse storagePolicyName="CV_DEFAULT" storagePolicyId="1" />
+			</commonInfo>
+			<dm2WebService dm2WebSitePort="0" xmlViewWebAlias="xmlview" searchSvcWebAlias="SearchSvc" apachePortNumber="0" dm2DataFileInstallPath="C:\Program Files\Commvault\ContentStore\Data\Data">
+				<sqlServerInfo pAccess="" sqlServerName="" />
+			</dm2WebService>
+			<fileSystem configureForLaptopBackups="0" />
+			<mediaAgent>
+				<indexCacheDirectory path="C:\Program Files\Commvault\ContentStore\IndexCache" />
+			</mediaAgent>
+			<componentInfo ComponentName="File System Core" consumeLicense="0" ComponentId="1" />
+			<componentInfo ComponentName="CommServe" consumeLicense="1" ComponentId="20" />
+			<componentInfo ComponentName="Commserve DB" ComponentId="801" />
+			<componentInfo ComponentName="WorkFlow Engine" consumeLicense="1" ComponentId="23" />
+			<componentInfo ComponentName="Workflow Engine DB" ComponentId="808" />
+			<componentInfo ComponentName="MediaAgent" consumeLicense="1" ComponentId="51" />
+			<componentInfo ComponentName="Web Server" consumeLicense="1" ComponentId="252" />
+			<componentInfo ComponentName="DM2 Web services DB" ComponentId="803" />
+			<componentInfo ComponentName="Search Advanced Document Type Support" consumeLicense="1" ComponentId="259" />
+			<componentInfo ComponentName="SQL Server" consumeLicense="1" ComponentId="353" />
+			<componentInfo ComponentName="VSS Provider" consumeLicense="1" ComponentId="453" />
+			<componentInfo ComponentName="VSS Hardware Provider" consumeLicense="1" ComponentId="455" />
+			<componentInfo ComponentName="CommCell Console" consumeLicense="1" ComponentId="701" />
+			<componentInfo ComponentName="File System" consumeLicense="1" ComponentId="702" />
+			<componentInfo ComponentName="Virtual Server" consumeLicense="1" ComponentId="713" />
+			<componentInfo ComponentName="Web Console" consumeLicense="1" ComponentId="726" />
+			<componentInfo ComponentName="Admin Console" consumeLicense="1" ComponentId="728" />
+		</components>
+		<clientInfo>
+			<clientProps ClientInterface="" BinarySetID="3" byteOrder="Little-endian" />
+			<client installDirectory="C:\Program Files\Commvault\ContentStore" cvdPort="0" clientPassword="3e5415483084798ebafc1c3d2a279fae46eecd3942c8c6a9e5605527dd415c28ffe4e052e5c1a6896a4df62c638c13492">
+				<jobResulsDir path="C:\Program Files\Commvault\ContentStore\iDataAgent\JobResults" />
+				<clientEntity hostName="" clientName="" />
+				<versionInfo GalaxyBuildNumber="BUILD80">
+					<GalaxyRelease ReleaseString="11.0" />
+				</versionInfo>
+				<osInfo Type="Windows" SubType="Server" Version="6.2" PlatformType="X64">
+					<OsDisplayInfo ProcessorType="WinX64" OSName="Windows Server 2012 R2 Standard Evaluation" OSBuild="9200" />
+				</osInfo>
+			</client>
+		</clientInfo>
+	</clientComposition>
+	<Dialogs name="InstallerBA.ViewModels.LicenseAgreementViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstallTypeViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageProcessorTypeViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageInstalltypeViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.PackageOptionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageDestinationViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.FeatureSelectionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CustomPackageOptionsViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstanceSelectionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.GalaxyHomePathViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.SQLPasswordViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.SqlInstallPathViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CSDataFilePathViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.ExpressRecoveryInstallPathViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.ConfigureProxyServiceViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.ComcellAccountInfoViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.FirewallDetectedViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.RunFirewallDaemonViewModel" show="0" />
+	<Dialogs name="ConfigureClientTool.ViewModels.DatabaseInstallOptionViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.CompletionExitViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstallSummaryViewModel" show="0" />
+	<Dialogs name="InstallerBA.ViewModels.InstallOptionViewModel" show="0" />
+</CVInstallManager_ClientSetup>

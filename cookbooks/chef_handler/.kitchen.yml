@@ -1,0 +1,28 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-5.11
+  - name: centos-6.7
+  - name: centos-7.2
+  - name: debian-7.10
+  - name: debian-8.4
+  - name: fedora-22
+  - name: fedora-23
+  - name: ubuntu-12.04
+  - name: ubuntu-14.04
+  - name: windows-2008r2 # private Chef Software Inc. image
+    driver_config:
+      box: chef/windows-server-2008r2-standard
+  - name: windows-2012r2 # private Chef Software Inc. image
+    driver_config:
+      box: chef/windows-server-2012r2-standard
+
+suites:
+  - name: json_file
+    run_list: chef_handler::json_file
+  - name: custom_resource
+    run_list: test::default

@@ -1,0 +1,27 @@
+<CVInstallManager_ClientSetup Focus="Instance001" JobID="0">
+<CommServeInfo>
+<CommserveHostInfo clientName="<%= @node['commvaultvmworld']['qsdk']['commserve_clientname'] %>" hostName="<%= @node['commvaultvmworld']['qsdk']['commserve_hostname'] %>" />
+</CommServeInfo>
+<clientComposition activateClient="<%= @node['commvaultvmworld']['decoupled_install'] %>" packageDeliveryOption="0">
+<clientInfo>
+<client cvdPort="8400" installDirectory="">
+<clientEntity clientName="" hostName=""/>
+<jobResulsDir path=""/>
+</client>
+<clientProps/>
+</clientInfo>
+<components>
+<componentInfo ComponentName="File System Core" consumeLicense="0" ComponentId="1" />
+<componentInfo ComponentName="File System" consumeLicense="1" ComponentId="702" />
+<componentInfo ComponentName="MediaAgent" consumeLicense="1" ComponentId="51" />
+<componentInfo ComponentName="VSS Provider" consumeLicense="1" ComponentId="453" />
+<componentInfo ComponentName="VSS Hardware Provider" consumeLicense="1" ComponentId="455" />
+<componentInfo ComponentName="Virtual Server" consumeLicense="1" ComponentId="713" />
+<commonInfo>
+<storagePolicyToUse storagePolicyName="CV_DEFAULT" storagePolicyId="1"/>
+</commonInfo>
+</components>
+</clientComposition>
+<installFlags deletePackagesAfterInstall="1" forceReboot="0" ignoreJobsRunning="0" killBrowserProcesses="0" overrideClientInfo="0" restoreOnlyAgents="0" stopOracleServices="0"/>
+<firewallInstall disableFirewall="1" firewallConnectionType="0" firewallConfigFile="" proxyClientName="" proxyHostName="" portNumber=""/>
+</CVInstallManager_ClientSetup>

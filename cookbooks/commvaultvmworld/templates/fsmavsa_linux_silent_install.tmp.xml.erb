@@ -1,0 +1,31 @@
+<CVInstallManager_ClientSetup Focus="Instance001" LocaleID="0" OEMID="1" Operationtype="0" RemoteClient="1" requestFlags="0" requestType="1">
+        <CommServeInfo>
+                <CommserveHostInfo clientName="<%= @node['commvaultvmworld']['qsdk']['commserve_clientname'] %>" hostName="<%= @node['commvaultvmworld']['qsdk']['commserve_hostname'] %>" />
+        </CommServeInfo>
+        <clientComposition>
+                <clientInfo>
+                        <client cvdPort="8400" installDirectory="/opt">
+                                <clientEntity clientName="" hostName="" />
+                                <jobResulsDir path="" />
+                        </client>
+                        <clientProps logFilesLocation="/var/log" />
+                </clientInfo>
+                <components>
+                        <commonInfo globalFilters="2">
+                                <storagePolicyToUse />
+                        </commonInfo>
+                        <componentInfo ComponentId="1003" ComponentName="Base0 Module" clientSidePackage="1" consumeLicense="1" osType="Unix" />
+                        <componentInfo ComponentId="1002" ComponentName="File System Core" clientSidePackage="1" consumeLicense="1" osType="Unix" />
+                        <fileSystem configureForLaptopBackups="0" />
+                        <componentInfo ComponentId="1101" ComponentName="File System" clientSidePackage="1" consumeLicense="1" osType="Unix" />
+                        <componentInfo ComponentId="1301" ComponentName="MediaAgent" clientSidePackage="1" consumeLicense="1" osType="Unix" />
+                        <mediaAgent>
+                                <indexCacheDirectory path="" />
+                        </mediaAgent>
+                        <componentInfo ComponentId="1136" ComponentName="Virtual Server" clientSidePackage="1" consumeLicense="1" osType="Unix" />
+                </components>
+        </clientComposition>
+        <installFlags autoRegister="1" decoupledInstall="<%= @node['commvaultvmworld']['decoupled_install'] %>" forceIPV4="1" ignoreJobsRunning="0" install32Base="0" restoreOnlyAgents="0" singleInterfaceBinding="0" unixGroup="" unixGroupAccess="7" unixOtherAccess="5" unixTempDirectory="">
+                <firewallInstall certificatePath="" enableFirewallConfig="" firewallConfigFile="" firewallConnectionType="" httpProxyHostName="" httpProxyPortNumber="" portNumber="" proxyClientName="" proxyHostName="" />
+        </installFlags>
+<Dialogs name="unixGroupSelection" show="False" /><Dialogs name="configLaptop" show="False" /><Dialogs name="unixGroup" show="False" /><Dialogs name="decoupledInstall" show="False" /><Dialogs name="ConfigureClientGroup" show="False" /><Dialogs name="CommcellAuthInput" show="False" /><Dialogs name="instance" show="False" /><Dialogs name="FirewallConfig" show="False" /><Dialogs name="decideNewGroup" show="False" /><Dialogs name="createCustom" show="False" /><Dialogs name="welcome" show="True" /><Dialogs name="configure" show="False" /><Dialogs name="CommServerSelection" show="False" /><Dialogs name="logDirectory" show="False" /><Dialogs name="cvdPort" show="False" /><Dialogs name="perClientCertLoc" show="False" /><Dialogs name="oem" show="False" /><Dialogs name="ConfigureStoragePolicy" show="False" /><Dialogs name="pkgSelection" show="False" /><Dialogs name="commserverPreClientCertificate" show="False" /><Dialogs name="unixPermissions" show="False" /><Dialogs name="ConfigureSubClientPolicy" show="False" /><Dialogs name="summary" show="False" /><Dialogs name="installDirectory" show="False" /><Dialogs name="restoreOnlyAgents" show="False" /></CVInstallManager_ClientSetup>

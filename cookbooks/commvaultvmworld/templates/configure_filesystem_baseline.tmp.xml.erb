@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<App_UpdateSubClientPropertiesRequest>
+	<association>
+		<entity>
+			<appName>File System</appName>
+			<clientName><%= @node.name %></clientName>
+			<backupsetName>defaultBackupSet</backupsetName>
+			<subclientName>default</subclientName>
+		</entity>
+	</association>
+	<newName />
+	<subClientProperties>
+		<contentOperationType>OVERWRITE</contentOperationType>
+		<commonProperties>
+			<encryptionFlag />
+			<description />
+			<enableBackup />
+			<numberOfBackupStreams />
+			<onDemandSubClient />
+			<allowMultipleDataReaders />
+			<storageDevice>
+				<networkAgents />
+				<softwareCompression>USE_STORAGE_POLICY_SETTINGS</softwareCompression>
+				<throttleNetworkBandwidth />
+				<applicableReadSize />
+				<dataBackupStoragePolicy>
+					<storagePolicyName><%= @node['commvaultvmworld']['storagepolicy']['name'] %></storagePolicyName>
+				</dataBackupStoragePolicy>
+				<deDuplicationOptions>
+					<enableDeduplication />
+					<generateSignature />
+				</deDuplicationOptions>
+			</storageDevice>
+			<snapCopyInfo>
+				<snapToTapeProxyToUseSource />
+				<isRMANEnableForTapeMovement />
+				<isSnapBackupEnabled />
+				<snapToTapeSelectedEngine>
+					<snapShotEngineName />
+				</snapToTapeSelectedEngine>
+				<snapToTapeProxyToUse>
+					<clientName />
+				</snapToTapeProxyToUse>
+			</snapCopyInfo>
+			<prepostProcess>
+				<preScanCommand />
+				<postScanCommand />
+				<preBackupCommand />
+				<postBackupCommand />
+				<runPostBackup />
+				<runAs />
+				<prepostUserName>
+					<userName />
+				</prepostUserName>
+			</prepostProcess>
+		</commonProperties>
+		<fsSubClientProp>
+			<useGlobalFilters />
+			<useVSS />
+			<useVSSForSystemState />
+			<backupSystemState />
+			<backupSystemStateforFullBkpOnly />
+			<oneTouchSubclient />
+			<retentionRule/>
+			<daysToKeepItems/>
+			<keepAtLeastPreviousVersions/>
+			<catalogAdditional />
+			<catalogACL />
+			<deletePSTFileOnly />
+			<scanOption />
+			<preserveFileAccessTime />
+			<checkArchiveBit />
+		</fsSubClientProp>
+		<content>
+			<path><%= @node['commvaultvmworld']['fsconfig']['content'] %></path>
+			<excludePath />
+			<includePath />
+		</content>
+		<impersonateUser>
+			<userName />
+			<password />
+		</impersonateUser>
+	</subClientProperties>
+</App_UpdateSubClientPropertiesRequest>

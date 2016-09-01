@@ -1,0 +1,23 @@
+nuget.exe
+Cheffile
+build.cmd
+build.ps1
+
+.vagrant
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+spec/examples.txt

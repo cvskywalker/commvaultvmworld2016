@@ -1,0 +1,47 @@
+<TMMsg_CreateTaskReq>
+ 
+  <taskInfo>
+    <task>
+      <taskFlags>
+        <disabled>false</disabled>
+      </taskFlags>
+      <policyType>DATA_PROTECTION</policyType>
+      <taskType>IMMEDIATE</taskType>
+      <initiatedFrom>COMMANDLINE</initiatedFrom>
+    </task>
+    <associations>
+      <backupsetName>defaultBackupSet</backupsetName>
+      <subclientName>default</subclientName>
+      <clientName><%= @node.name %></clientName>
+      <appName>File System</appName>
+      <instanceName>DefaultInstanceName</instanceName>
+    </associations>
+    <subTasks>
+      <subTask>
+        <subTaskType>BACKUP</subTaskType>
+        <operationType>BACKUP</operationType>
+      </subTask>
+      <options>
+        <backupOpts>
+          <backupLevel>FULL</backupLevel>
+          <mediaOpt/>
+          <dataOpt>
+            <createNewIndex>false</createNewIndex>
+            <followMountPoints>true</followMountPoints>
+            <useCatalogServer>true</useCatalogServer>
+            <enforceTransactionLogUsage>true</enforceTransactionLogUsage>
+            <skipConsistencyCheck>false</skipConsistencyCheck>
+          </dataOpt>
+          <runIncrementalBackup>true</runIncrementalBackup>
+          <incLevel>BEFORE_SYNTH</incLevel>
+          <doNotTruncateLog>false</doNotTruncateLog>
+          <sybaseSkipFullafterLogBkp>false</sybaseSkipFullafterLogBkp>
+        </backupOpts>
+        <adminOpts>
+          <updateOption/>
+        </adminOpts>
+      </options>
+    </subTasks>
+  </taskInfo>
+ 
+</TMMsg_CreateTaskReq>

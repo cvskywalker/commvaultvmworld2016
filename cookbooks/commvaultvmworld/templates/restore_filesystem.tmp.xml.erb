@@ -1,0 +1,80 @@
+<TMMsg_CreateTaskReq>
+ 
+  <taskInfo>
+    <task>
+      <taskFlags>
+        <disabled>false</disabled>
+      </taskFlags>
+      <policyType>DATA_PROTECTION</policyType>
+      <taskType>IMMEDIATE</taskType>
+      <initiatedFrom>COMMANDLINE</initiatedFrom>
+    </task>
+    <associations>
+      <backupsetName><%= @node['commvaultvmworld']['restore']['backupsetName'] %></backupsetName>
+      <subclientName/>
+      <clientName><%= @node['commvaultvmworld']['restore']['original_client'] %></clientName>
+      <appName>File System</appName>
+      <instanceName>DefaultInstanceName</instanceName>
+    </associations>
+    <subTasks>
+      <subTask>
+        <subTaskType>RESTORE</subTaskType>
+        <operationType>RESTORE</operationType>
+      </subTask>
+      <options>
+        <restoreOptions>
+          <browseOption>
+            <commCellId>2</commCellId>
+            <backupset>
+              <clientName></clientName>
+              <backupsetName></backupsetName>
+            </backupset>
+            <timeRange/>
+            <noImage>false</noImage>
+            <useExactIndex>false</useExactIndex>
+            <mediaOption>
+              <library/>
+              <mediaAgent/>
+              <drivePool/>
+              <copyPrecedence>
+                <copyPrecedenceApplicable>false</copyPrecedenceApplicable>
+              </copyPrecedence>
+            </mediaOption>
+            <listMedia>false</listMedia>
+          </browseOption>
+          <destination>
+            <destPath><%= @node['commvaultvmworld']['restore']['destination_path'] %></destPath>
+            <destClient>
+              <clientName><%= @node['commvaultvmworld']['restore']['destination_client'] %></clientName>
+            </destClient>
+            <inPlace><%= @node['commvaultvmworld']['restore']['inPlace'] %></inPlace>
+            <restoreOnlyIfTargetExists>false</restoreOnlyIfTargetExists>
+          </destination>
+          <virtualServerRstOption>
+            <isDiskBrowse>false</isDiskBrowse>
+          </virtualServerRstOption>
+          <fileOption>
+            <sourceItem><%= @node['commvaultvmworld']['restore']['original_path'] %></sourceItem>
+          </fileOption>
+          <commonOptions>
+            <overwriteFiles><%= @node['commvaultvmworld']['restore']['overwriteFiles'] %></overwriteFiles>
+            <dataInDeviceNode>false</dataInDeviceNode>
+            <unconditionalOverwrite>false</unconditionalOverwrite>
+            <stripLevelType>REMOVE_LEVEL</stripLevelType>
+            <preserveLevel>1</preserveLevel>
+            <stripLevel>1</stripLevel>
+            <restoreACLs>true</restoreACLs>
+            <restoreOnlyStubExists>false</restoreOnlyStubExists>
+            <doNotOverwriteFileOnDisk>false</doNotOverwriteFileOnDisk>
+            <systemStateBackup>false</systemStateBackup>
+            <clusterDBBackedup>false</clusterDBBackedup>
+          </commonOptions>
+        </restoreOptions>
+        <adminOpts>
+          <updateOption/>
+        </adminOpts>
+      </options>
+    </subTasks>
+  </taskInfo>
+ 
+</TMMsg_CreateTaskReq>
